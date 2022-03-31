@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class JUnit {
 
 	public static void main(String[] args) {
-		
+		JUnit regex = new JUnit();
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter your first name :");
 		String firstName = scan.nextLine();
