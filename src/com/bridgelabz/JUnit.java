@@ -15,6 +15,8 @@ public class JUnit {
 		String emailId = scan.nextLine();
 		System.out.println("Enter your Mobile Number:");
 		String mobileNumber = scan.nextLine();
+		System.out.println("Enter password:");
+		String password = scan.nextLine();
 		
 		System.out.println("first name is : " +firstName);
 		System.out.println("first name is valid ? " + firstName(firstName));
@@ -27,6 +29,8 @@ public class JUnit {
 		
 		System.out.println("Mobile No is : " +mobileNumber);
 		System.out.println("Mobile No valid ? " + mobileNumber(mobileNumber));
+		
+		System.out.println("Password valid ? " + password(password));
 		
 	}
 	
@@ -44,6 +48,14 @@ public class JUnit {
 	
 	public static boolean mobileNumber(String mobileNumber) {
 		return mobileNumber.matches("^(91)\\s{1}[7-9]{1}[0-9]{9}$");
+	}
+	
+	public static boolean password(String password) {
+		String pattern = "^[a-zA-Z0-9]{8,}$";
+		if(password.matches(pattern)) {
+			return true;
+		}
+		return false;
 	}
 
 }
