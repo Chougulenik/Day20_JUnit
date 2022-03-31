@@ -51,7 +51,7 @@ public class JUnit {
 	}
 	
 	public static boolean password(String password) {
-		String pattern = "^[A-Z]{1}[A-Za-z0-9]{7,}$";
+		String pattern = "(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}";
 		if(password.matches(pattern)) {
 			return true;
 		}
